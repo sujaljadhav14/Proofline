@@ -1,0 +1,218 @@
+[
+  {
+    "id": "proj_1",
+    "category": "project_resolution",
+    "message": "need to update the textbar on the landing page",
+    "projects": ["Landing (aliases: landing page)", "WebApp (aliases: web, site)"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "project": "Landing"
+    }
+  },
+  {
+    "id": "proj_2",
+    "category": "project_resolution",
+    "message": "fix connection pool leak on web",
+    "projects": ["Landing (aliases: landing page)", "WebApp (aliases: web, site)"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "project": "WebApp"
+    }
+  },
+  {
+    "id": "src_1",
+    "category": "source_detection",
+    "message": "tester says discount not applying for 3+ seats in webapp",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "source": "tester"
+    }
+  },
+  {
+    "id": "src_2",
+    "category": "source_detection",
+    "message": "boss wants an export button in the webapp by Friday",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "source": "boss"
+    }
+  },
+  {
+    "id": "split_1",
+    "category": "multi_task_splitting",
+    "message": "meeting: date filter broken on webapp, push notification copy change on mobile",
+    "projects": ["Landing", "WebApp", "Mobile (aliases: app)"],
+    "open_tasks": [],
+    "check": {
+      "task_count": 2
+    }
+  },
+  {
+    "id": "split_2",
+    "category": "multi_task_splitting",
+    "message": "client sync: add stripe checkout on webapp and update hero image on landing",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": [],
+    "check": {
+      "task_count": 2
+    }
+  },
+  {
+    "id": "date_1",
+    "category": "relative_date_words",
+    "message": "finish terms and conditions on landing by tomorrow",
+    "projects": ["Landing"],
+    "open_tasks": [],
+    "check": {
+      "has_deadline_text": true,
+      "deadline_text_contains": "tomorrow"
+    }
+  },
+  {
+    "id": "date_2",
+    "category": "relative_date_words",
+    "message": "deliver analytics exports for mobile next week",
+    "projects": ["Mobile"],
+    "open_tasks": [],
+    "check": {
+      "has_deadline_text": true,
+      "deadline_text_contains": "week"
+    }
+  },
+  {
+    "id": "done_single",
+    "category": "single_done_match",
+    "message": "done the textbar thing",
+    "projects": ["Landing"],
+    "open_tasks": ["12 | Landing | Update landing page textbar"],
+    "check": {
+      "done_task_id": 12,
+      "confidence": "high"
+    }
+  },
+  {
+    "id": "done_ambiguous",
+    "category": "ambiguous_done_match",
+    "message": "fixed the bug",
+    "projects": ["WebApp"],
+    "open_tasks": [
+      "10 | WebApp | Fix payment bug in checkout",
+      "11 | WebApp | Fix login bug on mobile web"
+    ],
+    "check": {
+      "confidence": "low"
+    }
+  },
+  {
+    "id": "edit_1",
+    "category": "edits",
+    "message": "make task 12 high priority",
+    "projects": ["Landing"],
+    "open_tasks": ["12 | Landing | Update landing page textbar"],
+    "check": {
+      "has_edits": true,
+      "edit_field": "priority",
+      "edit_value": "high"
+    }
+  },
+  {
+    "id": "edit_2",
+    "category": "edits",
+    "message": "postpone textbar task 12 to friday",
+    "projects": ["Landing"],
+    "open_tasks": ["12 | Landing | Update landing page textbar"],
+    "check": {
+      "has_edits": true,
+      "edit_field": "deadline"
+    }
+  },
+  {
+    "id": "q_pending",
+    "category": "query",
+    "message": "what's pending for mobile",
+    "projects": ["Mobile", "WebApp"],
+    "open_tasks": ["15 | Mobile | Push notifications"],
+    "check": {
+      "query_kind": "pending",
+      "query_project": "Mobile"
+    }
+  },
+  {
+    "id": "q_first",
+    "category": "query",
+    "message": "what should I do first?",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": ["1 | Landing | Navbar", "2 | WebApp | Checkout"],
+    "check": {
+      "query_kind": "first"
+    }
+  },
+  {
+    "id": "q_finished",
+    "category": "query",
+    "message": "what did I finish today?",
+    "projects": ["Landing"],
+    "open_tasks": [],
+    "check": {
+      "query_kind": "finished"
+    }
+  },
+  {
+    "id": "q_due",
+    "category": "query",
+    "message": "what is due this week?",
+    "projects": ["Landing"],
+    "open_tasks": [],
+    "check": {
+      "query_kind": "due"
+    }
+  },
+  {
+    "id": "messy_1",
+    "category": "messy_phrasing",
+    "message": "heyy login page broken on mobiel pls fix asap",
+    "projects": ["Mobile (aliases: app)", "Landing"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "project": "Mobile"
+    }
+  },
+  {
+    "id": "messy_2",
+    "category": "messy_phrasing",
+    "message": "quick note: typo in landing page foter link",
+    "projects": ["Landing (aliases: landing page)"],
+    "open_tasks": [],
+    "check": {
+      "has_tasks": true,
+      "project": "Landing"
+    }
+  },
+  {
+    "id": "chat_1",
+    "category": "chit_chat",
+    "message": "good morning bot, how are you today?",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": [],
+    "check": {
+      "no_tasks": true
+    }
+  },
+  {
+    "id": "chat_2",
+    "category": "chit_chat",
+    "message": "thanks a lot, talk to you later!",
+    "projects": ["Landing", "WebApp"],
+    "open_tasks": [],
+    "check": {
+      "no_tasks": true
+    }
+  }
+]
