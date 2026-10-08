@@ -9,11 +9,20 @@ It solves a universal developer problem: requests arrive scattered across chats,
 ## Features
 
 - 💬 **Free-form Capture:** Type requests in plain English; Proofline extracts task, project, priority, deadline, and source.
-- 🔍 **Duplicate Detection:** Checks against completed and open history before saving; lets you reopen or skip with one tap.
+- 🔍 **Duplicate Prevention:** Checks against completed and open history before saving; lets you reopen or skip with one tap.
 - 📋 **Interactive Daily Check-in:** A daily card lets you toggle finished tasks and confirm in seconds.
 - ⏰ **Sleep Catch-up:** Automatically catches up if your laptop was asleep during check-in time.
 - 📊 **Zero-LLM Updates:** `/update` builds instant, paste-ready daily or weekly summaries directly from your database.
 - 🔒 **Private by Default:** Everything runs locally on your machine with SQLite and optional local Ollama.
+
+---
+
+## Core Principles
+
+1. **User is the Authority on Status:** The database is the source of truth. Nothing is ever auto-closed from an LLM guess.
+2. **Never Lose or Invent Data:** Python resolves dates and validates all entity IDs.
+3. **Instant Undo:** Every created task or marked-done action comes with an instant undo button.
+4. **Offline First:** Daily summaries and status queries run strictly against your local database without requiring external API calls.
 
 ---
 
@@ -68,6 +77,14 @@ Talk to the bot naturally:
 
 ---
 
+## Roadmap
+
+- [x] **Phase 1: Core Work Ledger** — Natural language capture, duplicate warnings, end-of-day check-in, offline update generator.
+- [ ] **Phase 2: Local Git Evidence** — Inspect local repositories, suggest matching commits for finished tasks, and attach commit SHAs as proof.
+- [ ] **Phase 3: Notion Sync** — Two-way sync to a Notion checklist database for seamless ticking across devices.
+
+---
+
 ## Privacy
 
 - All tasks and records reside in your local SQLite database (`ledger.db`).
@@ -77,4 +94,6 @@ Talk to the bot naturally:
 
 ---
 
-TODO: choose a licence (MIT or AGPL)
+## License
+
+MIT License

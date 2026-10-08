@@ -24,6 +24,10 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Internal specifications
+AGENTS.md
+BUILD_BRIEF.md
+
 # IDE & OS
 .vscode/
 .idea/
